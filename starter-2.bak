@@ -47,14 +47,3 @@
 
 ;; how about (my-eval (first z2)) ?
 ;;    -> that's how we'll store lists of nodes
-
-;---------------------------------------------------Part 1---------------------------------------------------
-;; graph node -> graph
-(define (add-unique g n)
-  (if (member? n (graph-nodes g))
-      empty n))
-
-(define-syntax vertex
-  (syntax-rules (in)
-    [(vertex a in b)
-     (set! b (make-node (node-name b) (cons (node-edges b) (add-unique))))]))
