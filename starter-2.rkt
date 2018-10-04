@@ -51,10 +51,11 @@
 ;---------------------------------------------------Part 1---------------------------------------------------
 ;; graph node -> graph
 (define (add-unique g n)
-  (if (member? n (graph-nodes g))
+  (if (member n (graph-nodes g))
       empty n))
-
+;use a macro to append a node or empty to an existing list of graph nodes if it is unique
 (define-syntax vertex
   (syntax-rules (in)
     [(vertex a in b)
-     (set! b (make-node (node-name b) (cons (node-edges b) (add-unique))))]))
+     (set! b (make-graph
+              (graph-name b)(append (graph-nodes b) (list (add-unique b a)))))]))
