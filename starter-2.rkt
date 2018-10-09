@@ -2668,7 +2668,7 @@
 0 0 -1 -1 0 1 #"\0"
 0 75 10 #"Monospace\0"
 0.0 23 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
-255 255 1 -1           0 1088 0 24 29 1 #"\n"
+255 255 1 -1           0 1096 0 24 29 1 #"\n"
 0 0 28 3 12 #"#lang racket"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
@@ -4029,6 +4029,9 @@
 0 0 24 29 1 #"\n"
 0 0 17 3 21 #";;node -> ListOfNodes"
 0 0 24 29 1 #"\n"
+0 0 17 3 60
+#";;returns a list of all nodes accessible from the given node"
+0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 24 3 2 #" ("
@@ -4200,7 +4203,10 @@
 0 0 24 3 3 #")))"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
-0 0 17 3 21 #";Node Node -> Boolean"
+0 0 17 3 22 #";;Node Node -> Boolean"
+0 0 24 29 1 #"\n"
+0 0 17 3 65
+#";;returns true if n2 is accessible from n1 and false if it is not"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 15 3 6 #"define"
@@ -4225,8 +4231,13 @@
 0 0 24 3 3 #")))"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
-0 0 17 3 21 #";graph -> ListOfNodes"
+0 0 17 3 22 #";;graph -> ListOfNodes"
 0 0 24 29 1 #"\n"
+0 0 17 3 76
+(
+ #";;returns a list of all nodes accessible from at least one node in t"
+ #"he graph"
+) 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 15 3 6 #"define"
 0 0 24 3 2 #" ("
@@ -4265,7 +4276,10 @@
 0 0 24 3 5 #")))))"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
-0 0 17 3 21 #";graph -> ListOfNodes"
+0 0 17 3 22 #";;graph -> ListOfNodes"
+0 0 24 29 1 #"\n"
+0 0 17 3 68
+#";;returns a list of all nodes accessible from all nodes of the graph"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 15 3 6 #"define"
